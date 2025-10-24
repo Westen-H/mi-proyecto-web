@@ -1,1 +1,197 @@
-<!--se deberán incluir como mínimo algunos elementos multimedia (imágenes, videos, audios).-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Porfolio</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="page-portfolio">
+
+    <header>
+        <div>
+            <h1>Porfolio</h1>
+        </div>
+
+        <input type="checkbox" id="menu-toggle" class="toggle"/>
+        <label for="menu-toggle" class="menu-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <nav>
+            <ul>
+                <li id="#home"><a href="http://127.0.0.1:5501/index.html">Home</a></li>
+                <li id="#biografia"><a href="http://127.0.0.1:5501/pages/biografia.html">Biografía</a></li>
+                <li id="#mundoFriki"><a href="http://127.0.0.1:5501/pages/about.html">Mundo friki</a></li>
+                <li id="#Contacto"><a href="http://127.0.0.1:5501/pages/contact.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+<main class="container">
+    <section class="bloque" aria-labelledby="portfolio-title">
+      <header>
+        <h2 id="portfolio-title">Proyectos destacados</h2>
+        <p>Selección de trabajos, experimentos y piezas visuales. Lorem ipsum dolor sit amet.</p>
+      </header>
+
+      
+      <article class="card">
+        <h3>titulo del video</h3>
+        <video controls preload="metadata" width="100%" poster="#" autoplay>
+          <source src="/assets/videos/fashion.mp4" type="video/mp4">
+        </video>
+
+        <p style="margin-top:.5rem;">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, ad. 
+          <a class="link" href="#" aria-label="Ver proyecto Motion Intro">Ver proyecto</a>
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>Nombre del proyecto: por ejemplo el del porfolio</h3>
+        <figure>
+          <img src="../assets/images/Captura de pantalla 2025-10-24 071509.png" alt="Poster con textura bioluminiscente" loading="lazy">
+          <figcaption>Exploración de color y luz. Lorem ipsum dolor sit amet.</figcaption>
+        </figure>
+        <p style="margin-top:.5rem;">
+          <a class="link" href="#" aria-label="Ver proyecto Poster Serie">Ver proyecto</a>
+        </p>
+      </article>
+    </section>
+
+    <!-- Filtros (no funcionales aún; listos para JS futuro) -->
+    <section class="bloque" aria-label="Filtros del portfolio">
+      <header>
+        <h2 class="sr-only">Filtros</h2>
+      </header>
+      <article class="card" style="display:flex; gap:.5rem; flex-wrap:wrap;">
+        <button class="btn" type="button">Todo</button>
+        <button class="btn" type="button">Web</button>
+        <button class="btn" type="button">Arte</button>
+        <button class="btn" type="button">Vídeo</button>
+        <button class="btn" type="button">UI/UX</button>
+      </article>
+    </section>
+
+    <!-- Grid de proyectos -->
+    <section aria-labelledby="grid-title">
+      <header class="bloque">
+        <h2 id="grid-title">Galería</h2>
+        <p>Explora más piezas. Lorem ipsum dolor sit amet consectetur.</p>
+      </header>
+
+      <div class="portfolio-grid">
+        <!-- Tarjeta 1 aquí -->
+        <article class="project-card card">
+          <figure class="project-media">
+            <img src="../assets/images/logo.png" alt="Logotipo minimalista" loading="lazy">
+          </figure>
+          <h3 class="project-title">Logo Minimal</h3>
+          <p class="project-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <a href="#" class="link">Detalles</a>
+            <div class="tarjeta">
+                <div class="tarjeta-overlay"></div>
+                <img class="tarjeta-image" src="https://images.unsplash.com/photo-1705517649861-5450dc4dd44a" alt="">
+                <div class="tarjeta-details">
+                <h3 class="tarjeta-title">Norwegian fjords</h3>
+                <p class="tarjeta-text">Explore hidden gems and wonderful experiences</p>
+        </div>
+    </div>
+        </article>
+
+        <!-- Tarjeta 2 aquí -->
+        <article class="project-card card">
+          <figure class="project-media">
+            <img src="../assets/images/fondo.jpg" alt="Background artístico" loading="lazy">
+          </figure>
+          <h3 class="project-title">Texturas &amp; Luz</h3>
+          <p class="project-desc">Vestibulum ante ipsum primis in faucibus orci luctus.</p>
+          <a href="#" class="link">Detalles</a>
+        </article>
+
+        <!-- Tarjeta 3 aquí (Vídeo corto) -->
+        <article class="project-card card">
+          <figure class="project-media">
+            <video controls preload="metadata" width="100%" poster="../assets/images/fondo.jpg">
+              <source src="../assets/videos/tutorial.mp4" type="video/mp4">
+            </video>
+          </figure>
+          <h3 class="project-title">Titulo</h3>
+          <p class="project-desc">Phasellus ac sem sed neque pulvinar tempus.</p>
+          <a href="#" class="link">Detalles</a>
+        </article>
+
+        <!-- Tarjeta 4 aquí -->
+        <article class="project-card card">
+          <figure class="project-media">
+            <img src="../assets/images/fondo.jpg" alt="Composición cromática" loading="lazy">
+          </figure>
+          <h3 class="project-title">Titulo1</h3>
+          <p class="project-desc">Quisque luctus, nisi at pulvinar pulvinar, nunc lorem ultrices.</p>
+          <a href="#" class="link">Detalles</a>
+        </article>
+
+        <!-- Tarjeta 5 aquí -->
+        <article class="project-card card">
+          <figure class="project-media">
+            <img src="../assets/images/logo.png" alt="Sistema de marca" loading="lazy">
+          </figure>
+          <h3 class="project-title">Titulo2</h3>
+          <p class="project-desc">Integer dictum lorem ac feugiat laoreet.</p>
+          <a href="#" class="link">Detalles</a>
+        </article>
+
+        <!-- Tarjeta 6 aquí -->
+        <article class="project-card card">
+          <figure class="project-media">
+            <img src="../assets/images/fondo.jpg" alt="Moodboard" loading="lazy">
+          </figure>
+          <h3 class="project-title">titulotre</h3>
+          <p class="project-desc">Curabitur blandit tempus porttitor.</p>
+          <a href="#" class="link">Detalles</a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+
+    </main>
+
+    <footer>
+        <div class="contain1">
+            <div class="logo"><img src="/assets/images/ChatGPT-Image 24 oct 2025, 04_54_29.png" alt=""></div>
+            <div class="copyR">
+            <p>© 2025 Westen Web Style. Todos los derechos reservados.</p>
+            </div>
+        </div>
+
+        <div class="contain2">
+            <a href="https://twitter.com/" target="_blank" aria-label="Twitter">
+            <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://mail.google.com/" target="_blank" aria-label="Email">
+            <i class="fas fa-envelope"></i>
+            </a>
+            <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook">
+            <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://www.cloudflare.com/" target="_blank" aria-label="Cloudflare">
+            <i class="fab fa-cloudflare"></i>
+            </a>
+            <a href="https://discord.com/" target="_blank" aria-label="Discord">
+            <i class="fab fa-discord"></i>
+            </a>
+        </div>
+    </footer>
+</body>
+</html>

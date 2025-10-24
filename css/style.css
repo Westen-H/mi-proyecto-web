@@ -1,0 +1,515 @@
+/*#region HTML + BODY + CONTAINER ===================================*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+.page-home {
+    background-image: url(/assets/images/wp7120158.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+/*#endregion*/
+
+/*#region HEADER + MENU AMBURGESA ===================================*/
+header {
+    height: auto;
+    min-width: 400px;
+    background: #333;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 2px;
+}
+
+header > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap; 
+    gap: 10;
+    padding-top: 1rem;
+}
+
+header h1 {
+    width: 100%;
+    color: white;
+}
+
+/*#region Checkbox oculto ===================================*/
+.toggle {
+    display: none;
+}
+
+.menu-icon {
+    cursor: pointer;
+    width: 30px;
+    height: 25px;
+    position: relative;
+    display: inline-block;
+}
+
+.menu-icon span {
+    background-color: rgb(255, 250, 250);
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    border-radius: 2px;
+    left: 0;
+    transition: 0.3s ease;
+}
+
+.menu-icon span:nth-child(1) { top: 0; }
+.menu-icon span:nth-child(2) { top: 11px; }
+.menu-icon span:nth-child(3) { bottom: 0; }
+
+/* ANIMACIÓN Burger */
+.toggle:checked + .menu-icon span:nth-child(1) {
+    transform: rotate(45deg);
+    top: 11px;
+}
+
+.toggle:checked + .menu-icon span:nth-child(2) { opacity: 0; }
+
+.toggle:checked + .menu-icon span:nth-child(3) {
+    transform: rotate(-45deg);
+    bottom: 11px;
+}
+
+/*  MENU */
+nav {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+nav ul {
+    list-style: none;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    width: 100%;
+}
+
+.toggle:checked ~ nav ul {
+    display: flex;
+    background-image: linear-gradient(-60deg, #4f9ba8 0%, #0d4a52 100%);
+    padding: 10px 0;
+    z-index: 10;
+}
+/*#endregion*/
+/*#endregion*/
+
+/*#region NAV - VISIBLE ===================================*/
+nav {
+    margin-top: 10px;    
+    background-image: linear-gradient(-60deg, #8fc8d1 0%, #115e66 100%);
+}
+
+nav ul li { border-top: 1px solid #444; }
+nav ul li:first-child { border-top: none; }
+
+nav ul li a {
+    display: block;
+    padding: 15px 25px;
+    color: white;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.nav_link:hover {
+    background: rgba(255, 255, 255, 0.1); 
+    transition: all 0.3s ease;
+    opacity: 0.7;
+}
+/*#endregion*/
+
+/*#region MAIN ===================================*/
+main {
+    flex-grow: 1; 
+}
+/*#endregion*/
+
+/*#region FOOTER GLASSMORPHISM ===================================*/
+footer {
+    width: 100%;        
+    display: flex;
+    flex-direction: row;       
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 30px;
+    flex-wrap: wrap;          
+    text-align: center;    
+    background: rgba(77, 77, 77, 0.3);
+    backdrop-filter: blur(10px); 
+    border: 1px solid rgba(255, 255, 255, 0.2);    
+    box-shadow: 0 4px 30px rgba(0,0,0,0.1);    
+    color: #fff;
+}
+
+footer .logo { max-width: 150px; }
+footer .copyR { font-size: 0.9rem; }
+
+footer .contain1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+footer .contain2 {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+footer .contain2 a {
+    color: white;
+    text-decoration: none;
+}
+
+/*#endregion*/
+
+
+/*#region XXXXXXXXXXXXXXXXXXXXXXXXX BIOGRAFIA CSS XXXXXXXXXXXXXXXXXXXXXXXXX */
+
+    .bio-box {
+        background-image: url(/assets/images/fotoNegro.jpg);
+        background-size: 500px;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 400px;
+        height: 480px;
+        border-radius: 20px;
+        border: 1px solid transparent;  
+        margin-top: 50px;
+        margin-left: 500px;
+        transition: all 3s ease;
+    }
+    
+    .enlaces p a i {
+        color: white;
+        font-size: 20px;
+    }
+    
+    .enlaces p a{
+        color: white;
+        text-decoration: none;
+    }
+    
+    .whiteLine {
+        height: 425px;
+        background-color: transparent;
+        border: 1px solid rgb(253, 253, 253);
+        border-radius: 20px;
+        padding: 10px;
+        margin: 15px;
+    }
+    
+    @keyframes fa-beat {
+        0% {
+        transform: scale(1);
+        }
+        50% {
+        transform: scale(1.1);
+        }
+        100% {
+        transform: scale(1);
+        }
+    }
+
+    .fa-compass:hover {
+    animation: fa-spin 0.5s infinite;
+}
+
+    
+    .fa-instagram:hover {
+        animation: fa-beat 0.5s infinite;
+        color: rgb(219, 28, 69)
+    }
+    
+    .fa-basketball:hover,
+    .fa-facebook:hover {
+        animation: fa-bounce 1s infinite;
+        color: rgb(224, 107, 61)
+    }
+    
+    .fa-facebook {
+        width: 21px;
+        height: 20px;
+        background-color: white;
+        border-radius: 50%;
+        border-color: #000000;
+        margin: 0;
+        padding-left: 0px;
+        font-size: 20px;
+    }
+    
+    .fa-facebook:hover {
+        background-color: rgb(61, 61, 224);
+        animation: fa-beat-fade 1s infinite;
+    }
+    
+    .fa-twitter:hover {
+        color: rgb(100, 193, 255);
+        animation: fa-flip 2s infinite;
+    }
+
+    .ocultar{
+        transition: all 3s ease;
+    }
+
+    .ocultar{
+        opacity: 0;
+    }
+    .bio-box:hover{
+        background-position: left center;
+        background-size: 770px ;
+    }
+
+    .bio-box:hover .ocultar{
+        opacity: 1;
+    }
+
+/*#endregion */
+
+
+
+/*#region MEDIA QUERIES ===================================*/
+
+/* 600px */
+@media (min-width: 600px) {
+    .menu-icon { display: none; }
+    .menu { display: flex; }
+
+    /* HEADER y NAV */
+    header {
+        margin: 0;
+        justify-content: left;
+    }
+    header h1 { margin-left: 10rem; }
+    nav { background-image: linear-gradient(-60deg, #4f9ba8 0%, #0d4a52 100%); }
+
+    nav ul {
+        display: flex;
+        position: static;
+        flex-direction: row;
+        justify-content: end;
+        width: 90%;
+    }
+
+    nav ul li { border: none; }
+
+    nav ul li a {
+        padding: 0 15px;
+        line-height: 50px;
+        margin: 0;
+        font-size: larger;
+    }
+
+    nav ul li a:hover {
+        height: auto;
+        width: auto;
+        transition: all .4s;
+        opacity: 0.7;
+        background-color: transparent;
+    }
+
+    /* FOOTER */
+    footer {
+        display: flex;
+        flex-direction: column; 
+        justify-content: center;
+        align-items: center;
+        padding: 10px 15px;
+        gap: 10px;
+        height: 70px;
+        background-color: rgba(77, 77, 77, 0.3);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        color: #fff;
+        text-align: center;
+    }
+
+    footer .contain1 {
+        height: 30px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    footer .contain2 { display: flex; justify-content: center; }
+
+    .logo { margin-bottom: 0.5rem; margin-right: 2rem; }
+    footer .logo, footer .copyR { width: auto; } 
+}
+
+/* 1024px */
+@media (min-width: 1024px) {
+    /* mirar comportamiento de la pagina para añadir ajustes si precisa */
+}
+
+/* 1280px */
+@media (min-width: 1280px) {
+    header { justify-content: left; }
+    header h1 { margin-left: 60px; }    
+    nav ul { margin-right: 60px; }    
+}
+
+/* 1536px */
+@media (min-width: 1536px) {
+    footer {
+        height: 70px;
+        width: 100%;        
+        position: fixed;
+        bottom: 0;
+        left: 0;   
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(77, 77, 77, 0.617); 
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        color: #fff;
+        text-align: center;
+        font-size: 1rem;
+        padding: 15px;
+    }
+}
+/*#endregion*/
+
+/* ABOUT-Mundo Friki */
+
+.page-about {
+    background-image: url(/assets/images/pinocchio-lies-of-p-3840x2160-12878.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* FORM - CONTACTO*/
+
+/*#region === FORMULARIO CON GLASSMORPHISM === */
+
+.page-contact{
+    background-image: url(/assets/images/ChatGPT\ Image\ 24\ oct\ 2025\,\ 02_37_04.png);
+    }
+
+form {
+  max-width: 500px;
+  margin: 2rem auto;
+  font-family: Arial, sans-serif;
+  background: rgba(255, 255, 255, 0.08); /* transparencia */
+ border: 1px solid rgba(20, 19, 19, 0.26);
+  border-radius: 20px;
+  padding: 1.5rem 2rem;
+  backdrop-filter: blur(14px) saturate(180%);
+  -webkit-backdrop-filter: blur(14px) saturate(180%);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+  color: black;
+}
+
+/* Fieldset: más suave y transparente */
+fieldset {
+  border: 1px solid rgba(20, 19, 19, 0.26);
+  border-radius: 12px;
+  padding: 15px;
+  margin: 15px 0;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.form-group {
+  margin: 15px 0;
+}
+
+    /* Etiquetas */
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: black;;
+}
+
+    /* Inputs y select */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+ border: 1px solid rgba(20, 19, 19, 0.26);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  color: black; 
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+/* Efecto hover/focus */
+input:hover,
+textarea:hover,
+select:hover,
+input:focus,
+textarea:focus,
+select:focus {
+ border: 1px solid rgba(20, 19, 19, 0.26);
+  outline: none;
+  border-color: #0ea5a5;
+  box-shadow: 0 0 10px rgba(14, 165, 165, 0.4);
+}
+
+            /* Checkbox */
+input[type="checkbox"] {
+  margin-right: 5px;
+  accent-color: #0ea5a5;
+}
+
+            /* Botón */
+.formBtn {
+  width: 120px;
+  padding: 0.6rem 0.8rem;
+  border: none;
+  border-radius: 10px;
+  background: rgba(14, 165, 165, 0.4);
+  color: black;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.formBtn:hover {
+  background: rgba(14, 165, 165, 0.8);
+  color: #fff;
+  box-shadow: 0 0 12px rgba(14, 165, 165, 0.7);
+}
+
+/* Adaptación a móvil */
+@media (max-width: 600px) {
+  form {
+    padding: 1.2rem;
+    border-radius: 16px;
+  }
+}
+/*#endregion*/
+
