@@ -13,7 +13,7 @@ body {
 }
 
 .page-home {
-    background-image: url(/assets/images/wp7120158.jpg);
+    background-image: url(../assets/images/wp7120158.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -401,7 +401,7 @@ footer .contain2 a {
 /* ABOUT-Mundo Friki */
 
 .page-about {
-    background-image: url(/assets/images/pinocchio-lies-of-p-3840x2160-12878.jpeg);
+    background-image: url(../assets/images/pinocchio-lies-of-p-3840x2160-12878.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -411,7 +411,7 @@ footer .contain2 a {
 /*#region === FORMULARIO CON GLASSMORPHISM === */
 
 .page-contact{
-    background-image: url(/assets/images/ChatGPT\ Image\ 24\ oct\ 2025\,\ 02_37_04.png);
+    background-image: url(../assets/images/ChatGPT\ Image\ 24\ oct\ 2025\,\ 02_37_04.png);
     }
 
 form {
